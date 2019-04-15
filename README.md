@@ -14,11 +14,11 @@ Merge masses considered to be equal from different samples (spectra) into a larg
 
 Always use fastjoin, if your instrument allows you to use it.
 
-isotope_ratio_deviance_function:
+isotope_ratio_deviance_function.R:
 
 Calculates isotope ratio deviances e.g. Delta-C-13. using the ratio of observed intensities and expected intensities, where expected intensities are calculated based on binomial probabilities. A violin plot function is integrated to visualize results. 
 
-create_homologous_series_network:
+create_homologous_series_network.R:
 
 This function creates homologous series networks from molecular formulae. For this it uses the formulae instead of Kendrick mass defect calculations. Different links (e.g. CH2, O) can be selected. The network can be interactively visualized. 
 
