@@ -5,14 +5,17 @@ This functions provide insights into certain calculations within Geomol, which a
 These functions include:
 
 fastjoin.R: 
+
 Merge masses considered to be equal from different samples (spectra) into a large corsstab. Calculate the weighted mean mass as an improved estimator of the true mass. The algorithm used here is fast, but can lead to chaining of masses, when the precision of the mass spectrometer is not high enough or when masses of equal origin can have a higher error than masses of different origin from another sample. To check for a currect matching, see Geomol publication for more details.
 
 precisejoin.R: 
+
 Merge masses considered to be equal from different samples (spectra) into a large corsstab. Calculate the weighted mean mass as an improved estimator of the true mass. The algorithm used here is magnitudes slower than fast join, but can compensate chaining of masses bettern than fastjoin, when the precision of the mass spectrometer is not high enough or when masses of equal origin can have a higher error than masses of different origin from another sample. To check for a currect matching, see Geomol publication for more details.
 
 Always use fastjoin, if your instrument allows you to use it.
 
 isotope_ratio_deviance_function:
+
 Calculates isotope ratio deviances e.g. Delta-C-13. using the ratio of observed intensities and expected intensities, where expected intensities are calculated based on binomial probabilities. A violin plot function is integrated to visualize results. 
 
 create_homologous_series_network:
