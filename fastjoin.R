@@ -17,7 +17,7 @@ Data_fastjoin<-dplyr::arrange(Data,mz) %>%
   dplyr::group_by(group) %>%
   dplyr::mutate(max=(mz[which.max(I)]-mz)) %>%
   dplyr::ungroup() %>%
-  dplyr::group_by(group, index) %>% dplyr::arrange(max)%>% dplyr::mutate(gjk=as.character(ifelse(dplyr::row_number()==1,paste0(group,"x",dplyr::row_number()),paste0(group,"x",index,"x",dplyr::row_number()))))%>%            #dplyr::summarize(mz=(mz[which.min(max)]),I=(I[which.min(max)]),MDL=(MDL[which.min(max)]),ResPow=(ResPow[which.min(max)]),mz1=mz1[which.min(max)],refe=refe[which.min(max)],m1=m1[which.min(max)])%>%
+  dplyr::group_by(group, index) %>% dplyr::arrange(max)%>% dplyr::mutate(gjk=as.character(ifelse(dplyr::row_number()==1,paste0(group,"x",dplyr::row_number()),paste0(group,"x","x",dplyr::row_number()))))%>%            #dplyr::summarize(mz=(mz[which.min(max)]),I=(I[which.min(max)]),MDL=(MDL[which.min(max)]),ResPow=(ResPow[which.min(max)]),mz1=mz1[which.min(max)],refe=refe[which.min(max)],m1=m1[which.min(max)])%>%
   dplyr::ungroup() %>% 
   dplyr::select(c(-max,-group))%>%
   dplyr::group_by(gjk) %>%
