@@ -3,6 +3,8 @@
 #'Data' represents output from MDL
 #column mz = mass to charge ratio
 #column I = Intensity
+#column MDL = MDL level
+#column Respow = Resolution Power
 #column index = sample id
 tolp<-0.5 #your tolerance
 mdlname<-names(Data)[3]
@@ -12,7 +14,7 @@ library(tidyr)
 # Sort data by mass
 Data_fastjoin<-dplyr::arrange(Data,mz) %>%
   # Start with the smallest mass and check if the next mass is the tolerance range defined by 'tolp'. If Yes group togetherinto a mass cluster, if not start a new group (mass cluster). 
-  dplyr::mutate(mz1=mz,group = cumsum( abs(((mz - lag(mz, default = mz[1]) )/lag(mz, default = mz[1]))*10^6) > tolp)) %>%
+  dplyr::mutate(mz1=mz,group = cumsum( abs(((mz - dplyr::lag(mz, default = mz[1], order_by = mz) )/dplyr::lag(mz, default = mz[1], order_by = mz))*10^6) > tolp)) %>%
   # Group by found mass cluster and check for duplicate samples within a mass cluster
   dplyr::group_by(group) %>%
   dplyr::mutate(max=(mz[which.max(I)]-mz)) %>%
@@ -22,7 +24,7 @@ Data_fastjoin<-dplyr::arrange(Data,mz) %>%
   dplyr::select(c(-max,-group))%>%
   dplyr::group_by(gjk) %>%
   dplyr::mutate(
-  # calculate weighted average mass within each mass group 
+  # calculate weighted average mass within each mass group or use arithmethic mean with mean()
   mz = weighted.mean(mz, sqrt(I), na.rm=T),MDL=mean(MDL), ResPow=mean(ResPow),SE=sd(mz1)/mz*1e6,mz1=mean(mz1)) %>%  
   
   # Take out the  group assignment and columns not needed
