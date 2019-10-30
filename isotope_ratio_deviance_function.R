@@ -5,8 +5,8 @@ isotope_deviance<-function(intensity_parent,intensity_child,number_of_atoms,q=0.
   #intensity_child: intensity of the isotope peak (e.g. formula with one C-13); can be a vector
   #number_of_atoms: the number of total atoms of the element of interest (e.g. for Delta C-13 in  C6H12O6 use 6); can be a vector
   #number_of_isotopes: the number of the rare isotope inside the formula; for one C-13 use 1, for two C-13 use 2
-  #q natural abundance or standard of the rare isotope e.g. C-13 
-  #p natural abundance or standard of the common isotope e.g. C-12; this is not neccesarily 1-q e.g. for Iron
+  #q natural abundance or standard of the rare isotope e.g. C-13 . For Iron and elements with more than two stable isotopes use dmultinom() instead
+  #p natural abundance or standard of the common isotope e.g. C-12; this is not neccesarily 1-q e.g. for Iron. For Iron use dmultinom() instead
   
   
 ###calculate deviance###
