@@ -11,7 +11,6 @@ Merge masses considered to be equal from different samples (spectra) into a larg
 precisejoin.R: 
 
 Merge masses considered to be equal from different samples (spectra) into a large corsstab. Calculate the weighted mean mass as an improved estimator of the true mass. The algorithm used here is magnitudes slower than fast join, but can compensate chaining of masses bettern than fastjoin, when the precision of the mass spectrometer is not high enough or when masses of equal origin can have a higher error than masses of different origin from another sample. To check for a currect matching, see Geomol publication for more details.
-
 Always use fastjoin, if your instrument allows you to use it.
 
 ResPow_outlier.R:
