@@ -1,6 +1,6 @@
 # Geomol - Supplementary Code Modules
 
-This functions provide insights into certain calculations within Geomol, which are not covered by already published "R" packages mentioned inside the Geomol publication.
+These functions provide details about several calculations within Geomol, which are not covered by already published "R" packages mentioned inside the Geomol publication.
 
 These functions include:
 
