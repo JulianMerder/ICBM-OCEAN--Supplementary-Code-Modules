@@ -1,4 +1,4 @@
-# Geomol-Pseudocode
+# Geomol-Supplementary Code Modules
 
 This functions provide insights into certain calculations within Geomol, which are not covered by already published "R" packages mentioned inside the Geomol publication.
 
@@ -15,6 +15,7 @@ Merge masses considered to be equal from different samples (spectra) into a larg
 Always use fastjoin, if your instrument allows you to use it.
 
 ResPow_outlier.R:
+
 Estimates and eliminates side peaks that have a suspiciously high Resolution Power. Calculations are based on a median regression of mass as explaratory variable and Resolution Power as response. The slope of the kernel density estimate of the resulting residuals indicates the point where peaks are considered to be outliers. 
 
 isotope_ratio_deviance_function.R:
