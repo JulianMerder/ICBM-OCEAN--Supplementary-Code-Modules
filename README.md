@@ -1,16 +1,17 @@
-# Geomol - Supplementary Code Modules
+# ICBM-OCEAN (Institute for Chemistry and Biology of the Marine Environment - Oldenburg Complex molecular mixture evaluation & analysis)
+# Supplementary Code Modules
 
-These functions provide details about several calculations within Geomol, which are not covered by already published "R" packages mentioned inside the Geomol publication.
+These functions provide details about several calculations within ICBM-OCEAN, which are not covered by already published "R" packages mentioned inside the ICBM-OCEAN publication.
 
 These functions include:
 
 *fastjoin.R:* 
 
-Merge masses considered to be equal from different samples (spectra) into a large corsstab. Calculate the weighted mean mass as an improved estimator of the true mass. The algorithm used here is fast, but can lead to chaining of masses, when the precision of the mass spectrometer is not high enough or when masses of equal origin can have a higher error than masses of different origin from another sample. To check for a currect matching, see Geomol publication for more details.
+Merge masses considered to be equal from different samples (spectra) into a large corsstab. Calculate the weighted mean mass as an improved estimator of the true mass. The algorithm used here is fast, but can lead to chaining of masses, when the precision of the mass spectrometer is not high enough or when masses of equal origin can have a higher error than masses of different origin from another sample. 
 
 *precisejoin.R:* 
 
-Merge masses considered to be equal from different samples (spectra) into a large corsstab. Calculate the weighted mean mass as an improved estimator of the true mass. The algorithm used here is magnitudes slower than fast join, but can compensate chaining of masses bettern than fastjoin, when the precision of the mass spectrometer is not high enough or when masses of equal origin can have a higher error than masses of different origin from another sample. To check for a currect matching, see Geomol publication for more details.
+Merge masses considered to be equal from different samples (spectra) into a large corsstab. Calculate the weighted mean mass as an improved estimator of the true mass. The algorithm used here is magnitudes slower than fast join, but can compensate chaining of masses bettern than fastjoin, when the precision of the mass spectrometer is not high enough or when masses of equal origin can have a higher error than masses of different origin from another sample. 
 Always use fastjoin, if your instrument allows you to use it.
 
 *ResPow_outlier.R:*
