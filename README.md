@@ -1,5 +1,5 @@
 # ICBM-OCEAN 
-# (Institute for Chemistry and Biology of the Marine Environment - Oldenburg Complex molecular mixture evaluation & analysis)
+# Institute for Chemistry and Biology of the Marine Environment - Oldenburg Complex molecular mixture evaluation & analysis
 
 # Supplementary Code Modules
 
