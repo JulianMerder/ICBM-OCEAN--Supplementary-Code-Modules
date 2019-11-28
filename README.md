@@ -9,11 +9,11 @@ These functions include:
 
 *fastjoin.R:* 
 
-Merge masses considered to be equal from different samples (spectra) into a large corsstab. Calculate the (intensity weighted) mean mass as an improved estimator of the true mass. The algorithm used here is fast, but can lead to chaining of masses, when the precision of the mass spectrometer is not high enough or when masses of equal origin can have a higher error than the distance to masses of different origin from another sample. 
+Merge masses considered to be equal from different samples (spectra) into a large table. Calculate the (intensity weighted) mean mass as an improved estimator of the true mass. The algorithm used here is fast, but can lead to chaining of masses, when the precision of the mass spectrometer is not high enough or when masses of equal origin can have a higher error than the distance to masses of different origin from another sample. 
 
 *precisejoin.R:* 
 
-Merge masses considered to be equal from different samples (spectra) into a large corsstab. Calculate the (intensity weighted) mean mass as an improved estimator of the true mass. The algorithm used here is magnitudes slower than fast join, but can compensate chaining of masses better than *fastjoin.R*, when the precision of the mass spectrometer is not high enough or when masses of equal origin can have a higher error than the distance to masses of different origin from another sample. 
+Merge masses considered to be equal from different samples (spectra) into a large table. Calculate the (intensity weighted) mean mass as an improved estimator of the true mass. The algorithm used here is magnitudes slower than fast join, but can compensate chaining of masses better than *fastjoin.R*, when the precision of the mass spectrometer is not high enough or when masses of equal origin can have a higher error than the distance to masses of different origin from another sample. 
 Always use fastjoin, if your instrument has a high enough precision.
 
 *ResPow_outlier.R:*
@@ -26,7 +26,7 @@ Calculates isotope ratio deviances e.g. Delta-C-13. using the ratio of observed 
 
 *create_homologous_series_network.R:*
 
-This function creates homologous series networks from molecular formulae. For this it uses the formulae instead of Kendrick mass defect calculations. Different links (e.g. CH2, O) can be selected. The network can be interactively visualized. 
+This function creates homologous series networks from molecular formulae. For this it uses the formulae instead of Kendrick mass defect calculations. Different links (e.g. CH2, O) can be selected. The network can be visualized interactively. 
 
 
 
