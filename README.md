@@ -1,4 +1,6 @@
-# ICBM-OCEAN (Institute for Chemistry and Biology of the Marine Environment - Oldenburg Complex molecular mixture evaluation & analysis)
+# ICBM-OCEAN 
+# (Institute for Chemistry and Biology of the Marine Environment - Oldenburg Complex molecular mixture evaluation & analysis)
+
 # Supplementary Code Modules
 
 These functions provide details about several calculations within ICBM-OCEAN, which are not covered by already published "R" packages mentioned inside the ICBM-OCEAN publication.
