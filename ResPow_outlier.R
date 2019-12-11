@@ -41,7 +41,7 @@ ResPow_outlier<-function(dataset,column_mass=1,column_respow=4,method=1){
   names(dataset)[column_mass]<-name_mass
   names(dataset)[column_respow]<-name_respow
   
-  dataset<-dataset[d$residuals>abs(e),]
+  dataset<-dataset[d$residuals<=abs(e),]
   dataset$residual_color<-NULL
   return(list(dataset=dataset,plot=PLOT))
   
