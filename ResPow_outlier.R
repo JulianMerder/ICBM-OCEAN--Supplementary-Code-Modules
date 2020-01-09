@@ -27,7 +27,12 @@ ResPow_outlier<-function(dataset,column_mass=1,column_respow=4,method=1){
   
   if(method==1){
   j<-density(d$residuals)
-  e<-j$x[c(-1)][j$x[c(-1)]>0][which(diff(j$y)[j$x[c(-1)]>0]>0)[1]]  #first derivative of kernel sensity estimation, where it becomes positive again is set as the outlier treshold
+  #e<-j$x[c(-1)][j$x[c(-1)]>0][which(diff(j$y)[j$x[c(-1)]>0]>0)[1]]  #first derivative of kernel sensity estimation, where it becomes positive again is set as the outlier treshold
+  ex<-data.frame(x=j$x[c(-1)],y=diff(j$y))
+  ex1<-ex[ex$x>0,]
+  ex2<-ex1[c(which.min(ex1$y):nrow(ex1)),]
+  e<-ex2[which(ex2$y>0),1][1]
+  if(is.na(e)){e<-Inf}
   }
   else{
   e<-min(d$residuals)  
