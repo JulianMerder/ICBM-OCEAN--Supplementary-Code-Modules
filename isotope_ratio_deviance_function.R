@@ -14,6 +14,7 @@ isotope_deviance<-function(intensity_parent,intensity_child,number_of_atoms,q=0.
   expected_intensity_ratio<-dbinom(number_of_isotopes,number_of_atoms,q)/dbinom(number_of_atoms,number_of_atoms,p)
   
   rdeviance<-((measured_intensity_ratio/expected_intensity_ratio)-1)*1000
+  rdeviance_weighted<-((weighted.mean(intensity_child/intensity_parent,intensity_parent,na.rm=T)/expected_intensity_ratio)-1)*1000
 
   
   
@@ -41,7 +42,7 @@ if (!require("ggplot2")) {install.packages("ggplot2"); library(ggplot2)}
 
  }
   
-  return(list(deviance=rdeviance,plot=P))
+  return(list(deviance=rdeviance,weighted_mean_deviance=rdeviance_weighted,plot=P))
  }
 
 #example: measure Delta C-13 of two isotope pairs with a natural abundance of q=1.08% and for this case p=1-q. We consider the case for a single C13 in the molecule
