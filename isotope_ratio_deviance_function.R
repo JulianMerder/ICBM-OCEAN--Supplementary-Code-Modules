@@ -1,6 +1,6 @@
 ### function to calculate isotope ratio deviances
 
-isotope_deviance<-function(intensity_parent,intensity_child,number_of_atoms,q=0.0108,p=0.9892,number_of_isotopes=1,group=as.character(" "),color_by=as.character("black"),add_points=T,ptitle="",xlabel="",ylabel=expression(paste(delta^{13}, "C (\u2030)"))){ # ylabel: for e.g. O18 change 13 to 18 and "C (\u2030)" to "O (\u2030)"
+isotope_deviance<-function(intensity_parent,intensity_child,number_of_atoms,q=0.0108,p=0.9892,number_of_isotopes=1,group=as.character(" "),color_by=as.character(""),add_points=T,ptitle="",xlabel="",ylabel=expression(paste(delta^{13}, "C (\u2030)"))){ # ylabel: for e.g. O18 change 13 to 18 and "C (\u2030)" to "O (\u2030)"
   #intensity_parent: intensity of the isotope free peak (e.g. pure C-12); can be a vector
   #intensity_child: intensity of the isotope peak (e.g. formula with one C-13); can be a vector
   #number_of_atoms: the number of total atoms of the element of interest (e.g. for Delta C-13 in  C6H12O6 use 6); can be a vector
